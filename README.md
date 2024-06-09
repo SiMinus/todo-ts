@@ -1,8 +1,8 @@
 # todo-ts
 ## Table of Contents
-- [Introduction](#-introduction)
-- [Getting Started](#-getting-started)
-- [API Instruction](#-api-instruction)
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [API Instruction](#api-instruction)
 
 ## Introduction
 This project is a task management application where you can create, view your todos and update their status as time goes by. 
