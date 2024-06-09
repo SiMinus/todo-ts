@@ -4,8 +4,8 @@ This project is a task management application where you can create, view your to
 - Diverse colors are applied at task counters and task borders to manifest different status and priorities of tasks
 - At the bottom of each listed task, there are a switch and a button to update task status to in progress and completed respectively
   
-- And the change of creating and updating will be simutaneously synchronized in the task counters and list, which is achieved by React Context hook, allowing values to be passed into different layers of nested components, with no need to pass them layer by layer, working like a global variable.
-- Express Valiadator was utilized to ensure the submitted request data conforms to expected formats and content, thereby improving the application's security and reliability.
+- And the change of creating and updating will be simultaneously synchronized in the task counters and list, which is achieved by React Context hook, allowing values to be passed into different layers of nested components, with no need to pass them layer by layer, working like a global variable.
+- Express Validator was utilized to ensure the submitted request data conforms to expected formats and content, thereby improving the application's security and reliability.
 ### Technical Structure
 Application front-end using - TypeScript with React, Material UI, React Query / Tanstack Query, and Context API. <br>
 Application backend REST API using-  TypeScript with NodeJS, TypeORM, and MySql
@@ -27,7 +27,7 @@ git clone https://github.com/SiMinus/todo-ts.git
 cd todo-api
 npm install
 ```
-Make sure you have a mysql server set and running on your machine, in which you will create a database called todo
+Make sure you have a MYSQL server set and running on your machine, in which you will create a database called todo
 
 Configure .env file
 ```bash
@@ -37,7 +37,7 @@ MYSQL_PASSWORD=<your password>
 MYSQL_DB=todo
 
 ```
-Since the Entity was already created, the table will be automactically created due to the features of TypeORM after running:
+Since the Entity was already created, the table will be automatically created due to the features of TypeORM after running:
 ```bash
 npm run dev
 ```
