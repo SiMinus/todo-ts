@@ -1,6 +1,12 @@
 # todo-ts
+## Table of Contents
+- [Introduction](#-introduction)
+- [Getting Started](#-getting-started)
+- [API Instruction](#-api-instruction)
+
 ## Introduction
 This project is a task management application where you can create, view your todos and update their status as time goes by. 
+- The "create task" button is disabled before all the fields are filled.
 - Diverse colors are applied at task counters and task borders to manifest different status and priorities of tasks
 - At the bottom of each listed task, there are a switch and a button to update task status to in progress and completed respectively
   
@@ -46,5 +52,81 @@ npm run dev
 cd todo-front
 npm install
 ```
+## API Instruction
+### GET http://localhost:3200/tasks
+- Description: Retrieves a list of all tasks.
+- Request Parameters: None.
+- Content-Type: application/json
+- Example Response:
+```json
+[
+    {
+      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
+      "title": "django",
+      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
+      "description": "game",
+      "priority": "high",
+      "status": "completed"
+    },
+    {
+      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
+      "title": "test",
+      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
+      "description": "test",
+      "priority": "high",
+      "status": "inProgress"
+    }
+  ]
+  ```
+### POST http://localhost:3200/tasks
+- Description: Creates a new task.
+- Request Parameters: None.
+- Content-Type: application/json
+- Example Response:
+```json
+[
+    {
+      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
+      "title": "django",
+      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
+      "description": "game",
+      "priority": "high",
+      "status": "completed"
+    },
+    {
+      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
+      "title": "test",
+      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
+      "description": "test",
+      "priority": "high",
+      "status": "inProgress"
+    }
+  ]
+  ```
+### PUT http://localhost:3200/tasks
+- Description: Updates the completion status of a specific task.
+- Request Parameters: None.
+- Content-Type: application/json
+- Example Response:
+```json
+[
+    {
+      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
+      "title": "django",
+      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
+      "description": "game",
+      "priority": "high",
+      "status": "completed"
+    },
+    {
+      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
+      "title": "test",
+      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
+      "description": "test",
+      "priority": "high",
+      "status": "inProgress"
+    }
+  ]
+  ```
 
 
