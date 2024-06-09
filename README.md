@@ -5,6 +5,7 @@ This project is a task management application where you can create, view your to
 - At the bottom of each listed task, there are a switch and a button to update task status to in progress and completed respectively
   
 - And the change of creating and updating will be simutaneously synchronized in the task counters and list, which is achieved by React Context hook, allowing values to be passed into different layers of nested components, with no need to pass them layer by layer, working like a global variable.
+- Express Valiadator was utilized to ensure the submitted request data conforms to expected formats and content, thereby improving the application's security and reliability.
 ### Technical Structure: 
 Application front-end using - TypeScript with React, Material UI, React Query / Tanstack Query, and Context API. <br>
 Application backend REST API using-  TypeScript with NodeJS, TypeORM, and MySql
