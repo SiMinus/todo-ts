@@ -55,8 +55,8 @@ npm install
 ## API Instruction
 ### GET http://localhost:3200/tasks
 - Description: Retrieves a list of all tasks.
-- Request Parameters: None.
 - Content-Type: application/json
+- Request Parameters: None.
 - Example Response:
 ```json
 [
@@ -80,53 +80,65 @@ npm install
   ```
 ### POST http://localhost:3200/tasks
 - Description: Creates a new task.
-- Request Parameters: None.
 - Content-Type: application/json
+- Example Request:
+```json
+{
+  "title": "Mololor sit amet",
+  "date": "2021-01-01T12:00:00Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis diam vel malesuada ultricies.",
+  "priority": "normal",
+  "status": "todo"
+}
+  ```
 - Example Response:
 ```json
-[
+{
+  "title": "Mololor sit amet",
+  "date": "2021-01-01T12:00:00Z",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis diam vel malesuada ultricies.",
+  "priority": "normal",
+  "status": "todo",
+  "id": "039f7d63-8636-4acd-87a3-930651a10678"
+}
+  ```
+- Example Response if validation was not passed(date field is empty):
+```json
+  {
+  "errors": [
     {
-      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
-      "title": "django",
-      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
-      "description": "game",
-      "priority": "high",
-      "status": "completed"
+      "type": "field",
+      "msg": "The task date is mandatory",
+      "path": "date",
+      "location": "body"
     },
     {
-      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
-      "title": "test",
-      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
-      "description": "test",
-      "priority": "high",
-      "status": "inProgress"
+      "type": "field",
+      "msg": "The date needs to be a valid date format",
+      "path": "date",
+      "location": "body"
     }
   ]
-  ```
+}
+```
 ### PUT http://localhost:3200/tasks
 - Description: Updates the completion status of a specific task.
-- Request Parameters: None.
 - Content-Type: application/json
+- Example Request:
+```json
+{
+  "id": "fc3a6c94-ea10-47d8-ae9e-c1f39fe82ad8",
+  "status": "inProgress"
+}
+```
 - Example Response:
 ```json
-[
-    {
-      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
-      "title": "django",
-      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
-      "description": "game",
-      "priority": "high",
-      "status": "completed"
-    },
-    {
-      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
-      "title": "test",
-      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
-      "description": "test",
-      "priority": "high",
-      "status": "inProgress"
-    }
-  ]
+{
+  "generatedMaps": [],
+  "raw": [],
+  "affected": 1
+}
+  
   ```
 
 
