@@ -60,24 +60,24 @@ npm install
 - Example Response:
 ```json
 [
-    {
-      "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
-      "title": "django",
-      "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
-      "description": "game",
-      "priority": "high",
-      "status": "completed"
-    },
-    {
-      "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
-      "title": "test",
-      "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
-      "description": "test",
-      "priority": "high",
-      "status": "inProgress"
-    }
-  ]
-  ```
+  {
+    "id": "7cc6dd82-55cc-4e71-9dac-d35b9f1c699f",
+    "title": "django",
+    "date": "Fri May 10 2024 18:10:08 GMT+0100 (英国夏令时间)",
+    "description": "game",
+    "priority": "high",
+    "status": "completed"
+  },
+  {
+    "id": "9e8e1285-ff80-45fa-8418-1e9699c01d04",
+    "title": "test",
+    "date": "Sat May 04 2024 16:58:22 GMT+0100 (英国夏令时间)",
+    "description": "test",
+    "priority": "high",
+    "status": "inProgress"
+  }
+]
+```
 ### POST http://localhost:3200/tasks
 - Description: Creates a new task.
 - Content-Type: application/json
@@ -104,7 +104,7 @@ npm install
   ```
 - Example Response if validation was not passed(date field is empty):
 ```json
-  {
+{
   "errors": [
     {
       "type": "field",
