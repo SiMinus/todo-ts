@@ -55,7 +55,7 @@ npm install
 Compiled successfully!
 
 You can now view todo-app in the browser.
-### All set! Now you can go and creat your first todo!
+### All set! Now you can go and create your first todo!
 ## API Instruction
 ### GET http://localhost:3200/tasks
 - Description: Retrieves a list of all tasks.
