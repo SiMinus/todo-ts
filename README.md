@@ -16,7 +16,8 @@ This project is a task management application where you can create, view your to
 Application front-end using - TypeScript with React, Material UI, React Query / Tanstack Query, and Context API. <br>
 Application backend REST API using-  TypeScript with NodeJS, TypeORM, and MySql
 ### Final Version Display
-<img width="1498" alt="截屏2024-06-09 22 41 08" src="https://github.com/SiMinus/todo-ts/assets/124517416/f4a975f9-9050-4f96-9f69-44b0f1e10024">
+<img width="1361" alt="截屏2024-06-26 15 48 29" src="https://github.com/SiMinus/todo-ts/assets/124517416/3e4ef595-5854-41ca-bddf-3438fcc54aea">
+
 
 
 ### Components Division
