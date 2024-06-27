@@ -1,20 +1,30 @@
 import { createTheme, ThemeOptions } from "@mui/material";
 
 
-export const  customTheme: ThemeOptions = createTheme({
-    palette:{
-        mode: 'dark',
-        primary:{
-            light: 'rgba(168,85,247,.80)',
-            main: 'rgba(168,85,247,.65)',
-            dark: 'rgba(168,85,247,.28)'
-        },
-        background:{
-            paper: '#151515',
-            default: 'rgba(0,0,0,.96)'
+export const customTheme: ThemeOptions = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        light: 'rgba(168,85,247,.80)',
+        main: 'rgba(168,85,247,.65)',
+        dark: 'rgba(168,85,247,.28)'
+      },
+      background: {
+        paper: 'rgba(80, 80, 80, 0.7)',
+        default: 'url("/bg-img.jpg")' // 设置默认背景为图片
+      }
+    },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+            backgroundImage: 'url("/bg-img.jpg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed' // 使背景固定，不随页面滚动
+          }
         }
+      }
     }
-
-
-
-})
+  })
