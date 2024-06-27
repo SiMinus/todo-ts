@@ -11,7 +11,7 @@ export const customTheme: ThemeOptions = createTheme({
       },
       background: {
         paper: 'rgba(80, 80, 80, 0.7)',
-        default: 'url("/bg-img.jpg")' // 设置默认背景为图片
+        default: 'url("/bg-img.jpg")' // set up background image
       }
     },
     components: {
@@ -22,7 +22,7 @@ export const customTheme: ThemeOptions = createTheme({
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed' // 使背景固定，不随页面滚动
+            backgroundAttachment: 'fixed' // In this way, background image won't slide when scrolling up and down
           }
         }
       }
